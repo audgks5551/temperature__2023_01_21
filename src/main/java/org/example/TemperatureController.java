@@ -13,6 +13,6 @@ public class TemperatureController {
 
     @GetMapping("/")
     public String getTemperature() {
-        return temperatureService.measure();
+        return String.format("%.1f", temperatureService.measure());
     }
 }
