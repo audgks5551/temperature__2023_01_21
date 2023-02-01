@@ -12,3 +12,9 @@ docker run -d -p 8080:8080 -v /sys/bus/w1:/sys/bus/w1 --name=temperature audgks5
 
 vim /boot/firmware/config.txt
 dtoverlay=w1-gpio,gpiopin=23
+
+sudo modprobe w1-gpio
+sudo modprobe w1-therm
+
+sudo apt-get update
+sudo apt-get install raspi-config
